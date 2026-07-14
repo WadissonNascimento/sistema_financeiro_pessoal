@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f4f8;
+    color: #1f2937;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contas-mes{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tabelas{
+    background-color: #ffffff;
+    border: 1px solid #9ca3af;
+    overflow-x: auto;
+}
+
+.tabelas h2{
+    padding: 0.55rem;
+    text-align: center;
+    background-color: rgb(61, 61, 100);
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+.tabela-dados{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.tabela-dados th,
+.tabela-dados td{
+    border: 1px solid #9ca3af;
+    padding: 0.6rem;
+    text-align: center;
+    vertical-align: middle;
+    word-break: break-word;
+}
+
+.tabela-dados th{
+    background-color: rgb(113, 128, 197);
+    color: #111827;
+    font-weight: 700;
+}
+
+.tabela-dados tbody tr:nth-child(even){
+    background-color: #eef2ff;
+}
+
+.tabela-dados tbody tr:hover{
+    background-color: #dbeafe;
+}
