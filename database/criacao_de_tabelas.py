@@ -30,7 +30,18 @@ def criar_tabelas():
         )
         ''')
 
+        cursor.execute('''
+        CREATE TABLE IF NOT EXISTS usuarios(
+            id UUID PRIMARY KEY,
+            nome VARCHAR(50) NOT NULL,
+            email VARCHAR(50) NOT NULL UNIQUE,
+            senha_hash VARCHAR(255) NOT NULL
+        )
+        ''')
+
         conexao.commit()
     finally:
         cursor.close()
         conexao.close()
+
+criar_tabelas()

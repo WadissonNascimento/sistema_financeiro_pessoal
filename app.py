@@ -11,7 +11,7 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.get('/transacoes')
+@app.get('/')
 def buscar():
     return jsonify({
         "transacoes":buscar_transacoes(),
