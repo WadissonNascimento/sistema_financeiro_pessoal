@@ -34,11 +34,12 @@ def inserir_usuario(uuid, nome, email, senha_hash):
 
         conexao.commit()
 
-        return {"mensagem":"sucesso usuário cadastrado com sucesso."}
+        return True
 
     except Exception as e:
         conexao.rollback()
-        return {"erro":str(e)}
+        print(e)
+        return False
     
     finally:
         cursor.close()
