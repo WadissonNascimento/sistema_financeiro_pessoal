@@ -1,6 +1,6 @@
 from utils.validadores import validar_email
 from models.auth.cadastro import email_existe, inserir_usuario
-from utils.segurança import converter_hash, gerar_uuid
+from utils.seguranca import converter_hash, gerar_uuid
 
 def cadastrarUsuario(nome, email, senha):
     

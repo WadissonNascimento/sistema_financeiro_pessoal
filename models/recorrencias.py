@@ -16,15 +16,16 @@ def buscar_recorrencias():
         
         todas_recorrencias = []
         
-        for descricao, valor, quantidade_parcelas, inicio, final, categoria, dia_vencimento in recorrentes:
+        for descricao, valor, quantidade_parcelas, inicio, final, categoria, dia_vencimento, id_recorrencia in recorrentes:
             todas_recorrencias.append({
                 "descricao":descricao,
                 "valor":float(valor),
                 "quantidade_parcelas":quantidade_parcelas,
                 "inicio":inicio.isoformat(),
-                "final":final.isformat(),
+                "final":final.isoformat(),
                 "categoria":categoria,
-                "dia_vencimento":dia_vencimento
+                "dia_vencimento":dia_vencimento,
+                "id":id_recorrencia
             })
 
         return todas_recorrencias

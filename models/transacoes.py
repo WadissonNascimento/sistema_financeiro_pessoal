@@ -16,14 +16,16 @@ def buscar_transacoes():
         if transacoes == []:
             return []
         
-        for descricao, valor, tipo, categoria, data, status in transacoes:
+        for descricao, valor, tipo, categoria, data, status, id_transacoes in transacoes:
             todas_transacoes.append({
                 "descricao":descricao,
                 "valor":float(valor),
                 "tipo":tipo,
                 "categoria":categoria,
                 "data":data.isoformat(),
-                "status":status
+                "status":status,
+                "id":id_transacoes
+
             })
 
         return todas_transacoes
